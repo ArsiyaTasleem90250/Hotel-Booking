@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hostel Booking</h1>
+    <p>Find a comfortable room for your stay</p>
+  </header>
+
+  <main>
+    <section class="rooms">
+      <h2>Available Hostels</h2>
+      <div class="room-grid">
+        <article class="room-card">
+          <h3>Sunrise Hostel</h3>
+          <p>Location: Hyderabad</p>
+          <p>Room: Single sharing</p>
+          <p class="price">₹8,000 / month</p>
+          <button onclick="bookRoom('Sunrise Hostel', 8000)">Book Room</button>
+        </article>
+        <article class="room-card">
+          <h3>Green Nest Hostel</h3>
+          <p>Location: Vijayawada</p>
+          <p>Room: Two sharing</p>
+          <p class="price">₹5,500 / month</p>
+          <button onclick="bookRoom('Green Nest Hostel', 5500)">Book Room</button>
+        </article>
+        <article class="room-card">
+          <h3>City Comfort Hostel</h3>
+          <p>Location: Guntur</p>
+          <p>Room: Three sharing</p>
+          <p class="price">₹4,000 / month</p>
+          <button onclick="bookRoom('City Comfort Hostel', 4000)">Book Room</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking">
+      <h2>Booking Details</h2>
+      <form id="bookingForm">
+        <label for="studentName">Your Name</label>
+        <input id="studentName" type="text" required placeholder="Enter your name">
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" required pattern="[0-9]{10}" placeholder="10-digit phone number">
+        <label for="hostelName">Selected Hostel</label>
+        <input id="hostelName" type="text" readonly required>
+        <label for="monthlyFee">Monthly Fee (₹)</label>
+        <input id="monthlyFee" type="number" readonly required>
+        <button type="submit">Confirm Booking</button>
+      </form>
+      <p id="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer><p>Hostel Booking Demo Project</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
